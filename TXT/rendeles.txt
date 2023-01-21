@@ -1,0 +1,25 @@
+﻿Közterület;Házszám;Rendelési nap;Fafajta;Mennyiség (db)
+Dagály utca;2;2019.02.02;580;8
+Dagály utca;3;2019.02.26;keleti ostorfa;5
+Dagály utca;3;2019.02.26;gömbjuhar;3
+Dagály utca;3;2019.02.26;581;5
+Esztergomi út;2;2019.02.07;virágos kőris;8
+Esztergomi út;2;2019.02.07;csörgőfa;3
+Esztergomi út;2;2019.02.07;580;2
+Esztergomi út;4;2019.02.11;keleti ostorfa;9
+Népfürdő utca;3;2019.02.24;580;6
+Népfürdő utca;3;2019.02.24;virágos kőris;7
+Népfürdő utca;3;2019.02.24;csörgőfa;4
+Népfürdő utca;3;2019.02.24;gömbjuhar;3
+Bodor utca;3;2019.02.25;581;7
+Bodor utca;3;2019.02.25;csörgőfa;2
+Bodor utca;5;2019.02.12;581;5
+Bodor utca;5;2019.02.12;580;7
+Karikás Frigyes utca;1;2019.02.06;gömbjuhar;6
+Karikás Frigyes utca;4;2019.02.23;keleti ostorfa;1
+Karikás Frigyes utca;4;2019.02.23;580;5
+Karikás Frigyes utca;4;2019.02.23;csörgőfa;1
+Turbina utca;2;2019.02.21;csörgőfa;7
+Turbina utca;2;2019.02.21;580;5
+Turbina utca;2;2019.02.21;virágos kőris;2
+Turbina utca;3;2019.02.23;keleti ostorfa;6
