@@ -1,0 +1,14 @@
+A települési önkormányzat – a zöldebb környezet kialakításának érdekében – a közterületen elültethető facsemetékkel támogatja a társasházakat. A társasházak képviselői adott időszakban benyújtották mennyiségi igényüket különböző fajtájú facsemetékre. Egy címről egy facsemetefajtát egy alkalommal rendelhettek. 
+Készítsen konzolos alkalmazást a következő feladatok megoldására, melynek projektjét facsemeték néven mentse el!
+A rendeles.txt állományban rendelkezésére állnak a társasházak igénylései:
+Közterület, házszám, rendelési nap, fafajta, mennyiség(db), várakozás(nap)
+A fajtak.txt állomány első sorában a rendelhető facsemeték azonosítója a második sorban a facsemeték neve található:
+1.	Olvassa be a szóközökkel tagolt, UTF-8 kódolású rendeles.txt és a fajtak.txt állományokban lévő adatokat, és tárolja el egy olyan adatszerkezetben, ami a további feladatok megoldására alkalmas!
+2.	Cserélje le a rendelés állományból beolvasott adatok fafajta oszlopában az „580”-at „mezei juhar”-ra és az „581”-et „korai juhar”- ra! 
+3.	Rendezze a rendelési adatokat a közterület neve, házszáma és azon belül az igényelt fafajta neve szerint növekvően! 
+4.	Kérje be a felhasználótól a facsemeték kiszállítási napját. Pl.: 2019. március 12-i dátum! Határozza meg, és írja ki, hogy a rendelési időponthoz képest hány napot kellett várakozni a kiszállításra! 
+5.	Határozza meg, és írja ki a várakozási idők átlagát. Az eredmény két tizedesjegyre kerekítve jelenjen meg! 
+6.	Írja ki a várakozási idők legnagyobb és legkisebb értékét! 
+7.	Írja ki, hogy az egyes facsemetefajtákat hány címről rendelték! 
+8.	Számolja meg, és írja ki, hogy az egyes facsemetefajtákból hány darabot rendeltek összesen! 
+9.	Írja ki a rendelési címek, illetve a rendelt facsemeték összes számát! 
