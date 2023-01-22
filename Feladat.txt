@@ -10,5 +10,5 @@ A fajtak.txt állomány első sorában a rendelhető facsemeték azonosítója a
 5.	Határozza meg, és írja ki a várakozási idők átlagát. Az eredmény két tizedesjegyre kerekítve jelenjen meg! 
 6.	Írja ki a várakozási idők legnagyobb és legkisebb értékét! 
 7.	Írja ki, hogy az egyes facsemetefajtákat hány címről rendelték! 
-8.	Számolja meg, és írja ki, hogy az egyes facsemetefajtákból hány darabot rendeltek összesen! 
+-8.	Számolja meg, és írja ki, hogy az egyes facsemetefajtákból hány darabot rendeltek összesen! 
 9.	Írja ki a rendelési címek, illetve a rendelt facsemeték összes számát! 
