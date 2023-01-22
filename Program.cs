@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Diagnostics;
 using System.Reflection;
+using System.Security.Cryptography;
 
 namespace Facsemete
 {
@@ -74,18 +75,9 @@ namespace Facsemete
              */
             foreach (string[] aktualisRendeles in rendelesLista)
             {
-                for (int i = 0; i < aktualisRendeles.Length; i++)
-                {
-                    if (aktualisRendeles[i] == "580")
-                    {
-                        aktualisRendeles[i] = "mezei juhar";
-                    }
-
-                    if (aktualisRendeles[i] == "581")
-                    {
-                        aktualisRendeles[i] = "korai juhar";
-                    }
-                }    
+                // rendelesAdatok[3] = Fafajta;
+                if (aktualisRendeles[3] == "580") { aktualisRendeles[3] = "mezei juhar"; }
+                if (aktualisRendeles[3] == "581") { aktualisRendeles[3] = "korai juhar"; }    
             }
 
             /****************************************************************************
@@ -125,13 +117,60 @@ namespace Facsemete
             }
 
             double atlagosVarakozasiIdoNapban = osszesVarakozasiIdoNapban / rendelesLista.Count;
-            Console.WriteLine("Az átlagos várakozási idő napban: " + atlagosVarakozasiIdoNapban + " nap");
+            Console.WriteLine("Az átlagos várakozási idő napban: " + atlagosVarakozasiIdoNapban.ToString("F2") + " nap");
 
-            /*
+            /****************************************************************************
              * 6.Írja ki a várakozási idők legnagyobb és legkisebb értékét!
              */
 
+            // Használjuk megint a 4-est!
 
+            string[] elsoElem = rendelesLista.ElementAt(0);            
+            int maxVarakozas = 0;
+            int minVarakozas = (datum - DateTime.Parse(elsoElem[2])).Days; // nem kezdhetsz nullával, mert akkor az lesz a legkisebb!
+            
+            foreach (string[] aktualisRendeles in rendelesLista)
+            {
+                if ((datum - DateTime.Parse(aktualisRendeles[2])).Days > maxVarakozas) { maxVarakozas = (datum - DateTime.Parse(aktualisRendeles[2])).Days; }
+                if ((datum - DateTime.Parse(aktualisRendeles[2])).Days < minVarakozas) { minVarakozas = (datum - DateTime.Parse(aktualisRendeles[2])).Days; }
+            }
+
+            Console.WriteLine("A legnagyobb várakozási idő: " + maxVarakozas + "nap.");
+            Console.WriteLine("A legkisebb várakozási idő: " + minVarakozas + "nap.");
+
+
+            /****************************************************************************
+             * 7. Írja ki, hogy az egyes facsemetefajtákat hány címről rendelték! 
+             * 
+             * 
+             */
+
+
+
+            /****************************************************************************
+             * 8. Számolja meg, és írja ki, hogy az egyes facsemetefajtákból hány darabot rendeltek összesen! 
+             */
+
+            // létrehozunk egy, a fa fajtákkal egyező hosszúságú tömböt
+            // ha egy fafajta egyezik, azon a helyiértéken 1-gyel növelünk
+            int[] rendelesDarab = new int[faFajtaNevek.Length];
+
+            foreach (string[] aktualisRendeles in rendelesLista)
+            {
+                for (int i = 0; i < faFajtaNevek.Length; i++)
+                {
+                    if (aktualisRendeles[3] == faFajtaNevek[i])
+                    {
+                        rendelesDarab[i] = rendelesDarab[i] +1;
+                    }
+                }
+            }
+
+            for (int i = 0; i < faFajtaNevek.Length; i++)
+            {
+                Console.WriteLine("A fa fajtája: " + faFajtaNevek[i]);
+                Console.WriteLine("Rendelések darabszáma: " + rendelesDarab[i]);
+            }
         }
     }
 }
